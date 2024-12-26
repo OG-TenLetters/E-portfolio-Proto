@@ -48,11 +48,11 @@
           <li class="nav__link">
             <a
               class="nav__link--anchor link__hover-effect link__hover-effect--black"
-              href=""
+              onclick="toggleModal()"
               >Contact</a
             >
           </li>
-          <li class="nav__link--anchor">
+          <li class="nav__link--anchor" onclick="toggleContrast()">
             <i
               class="fa-solid fa-circle-half-stroke click"
               class="fa-adjust"
@@ -66,10 +66,10 @@
           <h1 class="header__title-2 chosen-color">I'm Jadon.</h1>
           <p class="header__para">
             I'm a
-            <b class="chosen-color">Frontend Software Engineer</b> with a strong
+            <b class="chosen-color for-dark-1">Frontend Software Engineer</b> with a strong
             passion of continous learning and improvement with any aspect
             involving Tech. <br />Here's a bit more
-            <b class="chosen-color">about me.</b>
+            <b class="chosen-color for-dark-2 click" onclick="toggleModal()">about me.</b>
           </p>
           <div class="social__links">
             <a
@@ -93,7 +93,7 @@
           </div>
         </div>
       </header>
-      <button class="mail__btn click">
+      <button class="mail__btn click" onclick="toggleModal()">
         <i class="fa-solid fa-envelope mail__btn--resize"></i>
       </button>
       <a href="#projects" class="scroll">
@@ -187,6 +187,7 @@
           </div>
         </div>
         <div class="modal__half modal__contact">
+          <i class="fas fa-times modal__exit click" onclick="toggleModal()"></i>
           <h3 class="modal__title modal__title--contact">Let's have a chat!</h3>
           <h3 class="modal__sub-title modal__sub-title--contact">
             Im currently open to new opportunities.
@@ -220,7 +221,6 @@
             Thanks for the message! Looking forward to speaking to you soon.
           </div>
         </div>
-        <i class="fas fa-times modal__exit click"></i>
       </div>
     </section>
 
@@ -374,7 +374,7 @@
               >Linkedin</a
             >
             <a
-              href=""
+              onclick="toggleModal()"
               class="footer__social--link link__hover-effect link__hover-effect--white"
               >Email</a
             >
