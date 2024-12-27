@@ -34,7 +34,7 @@
           <li class="nav__link">
             <a
               class="nav__link--anchor link__hover-effect link__hover-effect--black"
-              href="#about-me"
+              onclick="toggleModal()"
               >About</a
             >
           </li>
@@ -92,9 +92,11 @@
           </div>
         </div>
       </header>
+      <a href="#">
       <button class="mail__btn click" onclick="toggleModal()">
         <i class="fa-solid fa-envelope mail__btn--resize"></i>
       </button>
+    </a>
       <a href="#projects" class="scroll">
         <div class="scroll__icon click"></div>
       </a>
@@ -382,6 +384,7 @@
               >Linkedin</a
             >
             <a
+              href="#"
               onclick="toggleModal()"
               class="footer__social--link link__hover-effect link__hover-effect--white"
               >Email</a
