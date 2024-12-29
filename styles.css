@@ -6,19 +6,26 @@
   font-family: "Roboto", "sans-serif";
 }
 
-#personal-logo {
-  height: 50px;
-  width: 50px;
-  filter: invert(1);
-}
 
-html {
+html:root {
   scroll-behavior: smooth;
 }
 
-/* img {
+
+.personal-logo {
+  height: 50px;
+  width: 50px;
+  filter: invert(1);
   transition: all 300ms ease;
-} */
+}
+
+.logo--hover {
+  transition: all 300ms ease;
+}
+
+.logo--hover:hover {
+  opacity: 0.70;
+}
 
 a {
   text-decoration: none;
@@ -151,6 +158,16 @@ textarea {
   }
 }
 
+@keyframes Fade-in-for-btn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.75;
+  }
+}
+
+
 nav,
 .scroll,
 .header {
@@ -173,11 +190,7 @@ footer {
   z-index: 500;
 }
 
-.mail__btn {
-  z-index: 600;
-  animation: Fade-in 1200ms 1400ms backwards;
 
-}
 
 .dark-theme .link__hover-effect--black:after {
   background-color: white;
@@ -230,7 +243,7 @@ footer {
   background-position: bottom;
 }
 
-.dark-theme #personal-logo {
+.dark-theme .personal-logo {
   filter: none;
 }
 
@@ -341,6 +354,13 @@ LANDING PAGE
   position: fixed;
   bottom: 32px;
   right: 40px;
+  z-index: 2001;
+  animation: Fade-in-for-btn 1200ms 1400ms backwards;
+  opacity: .75;
+}
+
+.mail__btn:hover {
+  opacity: 1;
 }
 
 .scroll {
@@ -414,6 +434,7 @@ nav {
   transition: 600ms all ease;
   opacity: 1;
   animation: Fade-in 600ms 800ms backwards;
+  position: relative;
 }
 
 .nav__link--list {
@@ -522,6 +543,7 @@ MODAL
   transition: all 300ms ease;
 }
 
+
 .modal__language:hover .language__name {
   transform: scale(1);
 }
@@ -615,7 +637,7 @@ MODAL
 }
 
 .modal__overlay--loading {
-  background-color: blue;
+  background-color: #242424;
   font-size: 80px;
 }
 
@@ -666,6 +688,7 @@ PROJECTS
   font-size: 40px;
   margin-bottom: 60px;
   color: #361515;
+  position: relative;
 }
 
 .project {
@@ -763,6 +786,11 @@ footer {
 
 .footer__logo--img {
   width: 70px;
+  transition: filter 300ms ease;
+}
+
+.footer__logo--img:hover {
+  filter: brightness(80%);
 }
 
 .footer__social--list {
